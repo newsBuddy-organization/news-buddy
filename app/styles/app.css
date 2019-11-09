@@ -1,3 +1,21 @@
 body {
     padding-top: 56px;
   }
+
+  /* Using module imports later on */
+  /* LOGIN UI */
+  .userIconContainer {
+    margin-left: 20px!important;
+  }
+  .roundImage {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  #userDefault {
+    height: 30px; width: 30px;
+  }
+
+
+
+
+  /* END LOGIN UI STYLING*/
