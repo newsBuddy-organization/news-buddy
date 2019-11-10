@@ -4,6 +4,9 @@ body {
 
   /* Using module imports later on */
   /* LOGIN UI */
+  .dark_bg {
+    background-color: #222f3e;
+  }
   .userIconContainer {
     margin-left: 20px!important;
   }
@@ -14,6 +17,7 @@ body {
   #userDefault {
     height: 30px; width: 30px;
   }
+ 
 
 
 
