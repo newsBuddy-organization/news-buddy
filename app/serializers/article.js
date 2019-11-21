@@ -1,10 +1,10 @@
 import DS from 'ember-data';
 
 export default DS.JSONAPISerializer.extend({
-  primaryKey: '_id',
-    keyForAttribute(key) {
-      return key;
-    },
+  primaryKey: 'id',
+  keyForAttribute(key) {
+    return key;
+  },
     normalizeResponse(store, primaryModelClass, payload, id, requestType) {
         payload.data = payload.results;
         payload.data.forEach(item => {

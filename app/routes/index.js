@@ -8,10 +8,10 @@ export default Route.extend({
     },
     model(){
         return this.get('store').findAll('article');
-    },
+    }/*
     model(params){
         return this.store.query('search', {
             q: params.q 
           });
-    }
+    }*/
 });
