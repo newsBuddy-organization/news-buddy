@@ -1,0 +1,22 @@
+{{outlet}}
+<h2>articles you searched for</h2>
+    <table summary="This table shows movies" >
+             
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>url</th>
+              <th>abstract</th>
+            </tr>
+          </thead>
+          <tbody>
+              {{#each this.model as |article|}}
+            <tr>  
+              <td> {{article.title}}</td>
+              <td> {{article.url}}</td>
+              <td> {{article.abstract}}</td>
+            </tr> 
+                {{/each}}
+          </tbody>
+           
+        </table>
