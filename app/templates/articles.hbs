@@ -1,22 +1,18 @@
 {{outlet}}
-<h2>articles you searched for</h2>
-    <table summary="This table shows movies" >
-             
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>url</th>
-              <th>abstract</th>
-            </tr>
-          </thead>
-          <tbody>
-              {{#each this.model as |article|}}
-            <tr>  
-              <td> {{article.title}}</td>
-              <td> {{article.url}}</td>
-              <td> {{article.abstract}}</td>
-            </tr> 
-                {{/each}}
-          </tbody>
-           
-        </table>
+
+    <div class="row text-center my-4">
+        {{#each this.model as |article|}}
+        <div class="col-lg-4 col-md-8 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">{{article.title}}</h4>
+                    <p class="card-text">{{article.abstract}}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{article.url}}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+

@@ -1,30 +1,79 @@
 <!-- Page Content -->
-<div class="container">
 
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Arts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Automobiles</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Books</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Business</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Education</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Fashion</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Food</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Health</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Movies</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Science</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Sports</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Travel</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">U.S.</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">World</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Your Money</a>
+        </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+        <form class="navbar-form form-inline" role="search">
+            <div class="input-group add-on">
+                <Input class="form-control mr-sm-2" placeholder="Search" type="text" @id="search" @value={{model.lookup.search}}/>
+
+                <button class="btn btn-primary" type="submit" {{action "submit" model.lookup.search}}>Search</button>
+            </div>
+        </form>
+    </ul>
+</nav>
+
+<div class="container ">
+   
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
         <h1 class="display-3">news buddy.</h1>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus
             non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-
-        <div class="container ">
-            <form class="navbar-form" role="search">
-                <div class="input-group add-on">
-                    <Input class="form-control" placeholder="Search" type="text" @id= "search" @value={{this.search}}/>
-                    <div class="input-group-btn">
-                        <button  class="btn btn-default" type="submit"  {{action 'submit' this.search}}><i class="glyphicon glyphicon-search"></i></button>
-                    </div>
-                </div>
-            </form>
-        </div>
         <a href="#" class="btn btn-primary btn-lg">Sign up!</a>
     </header>
 
     <!-- Page Features -->
- 
-    
+
+
     <div class="row text-center">
-        {{#each model as |article|}}
+        {{#each this.model.articles as |article|}}
         <div class="col-lg-4 col-md-8 mb-4">
             <div class="card h-100">
                 <img class="card-img-top card-img-size" src="{{article.imgurl}}" alt="">
@@ -37,11 +86,11 @@
                 </div>
             </div>
         </div>
-  {{/each}}
+        {{/each}}
     </div>
-  
+
     <!-- /.row -->
-  
+
 
 </div>
 
