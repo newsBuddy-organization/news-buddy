@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>NewsBuddy</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head"}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NewsBuddy</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> {{content-for "head"}}
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/news-buddy.css">
-      <!-- Bootstrap core CSS -->
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/news-buddy.css">
+  <!-- Bootstrap core CSS
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  -->
+  <!-- Custom styles for this template 
+  <link href="css/heroic-features.css" rel="stylesheet"> {{content-for "head-footer"}}
+  -->
+</head>
 
-  <!-- Custom styles for this template -->
-  <link href="css/heroic-features.css" rel="stylesheet">
+<body>
+  {{content-for "body"}}
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+  <script src="{{rootURL}}assets/vendor.js"></script>
+  <script src="{{rootURL}}assets/news-buddy.js"></script>
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/news-buddy.js"></script>
-
-  <!-- Bootstrap core JavaScript -->
+  <!-- Bootstrap core JavaScript 
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> {{content-for "body-footer"}}
+  -->
+</body>
 
-    {{content-for "body-footer"}}
-  </body>
 </html>
