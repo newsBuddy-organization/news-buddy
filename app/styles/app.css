@@ -18,7 +18,10 @@ body {
     height: 30px; width: 30px;
   }
  
-
+  .loginContainer {
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+  }
 
 
 
