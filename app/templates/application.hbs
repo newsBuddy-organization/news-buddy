@@ -21,15 +21,24 @@
                     <a class="nav-link" href="">Log in</a>
                 </li> --}}
                 <li class="nav-item">
-                <div id="user" class="userIconContainer">
-                <a href="" alt="Login">
-                    <span class="nav-link"><img id="userDefault" class="roundImage" src="assets/images/blank.png"/></span>
-                </a>
+                <div id="" class="userIconContainer">
+                    {{#if session.isAuthenticated}}
+                    {{!-- <span class="greetUser">Hi, {{ session.data.authenticated.user.displayName }}</span>  --}}
+                    <input {{action "displayMenu"}} id="userDefault" class="roundImage" type="image" src="{{ session.data.authenticated.user.photoURL }}" />
+                    <button class="logoutBtn" {{action "logout"}}>Sign out</button>
+                    {{!-- {{outlet}} --}}
+                    {{else}}
+                    <span class="nav-link">
+                        <input {{action "login"}} id="userDefault" class="roundImage" type="image" src="assets/images/blank.png" />
+                        </span>
+                    {{/if}}
                 </div>
-          </li>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
+
+
 
 {{outlet}}
