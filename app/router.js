@@ -7,7 +7,11 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+<<<<<<< HEAD
   this.route('articles');
+=======
+  this.route('login');
+>>>>>>> ns_newsbuddy_login
 });
 
 export default Router;
