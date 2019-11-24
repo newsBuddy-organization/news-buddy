@@ -17,7 +17,9 @@ export default Controller.extend({
       return auth.signInWithPopup(provider);
     },
     displayMenu() {
-      alert("Loging out?");
+      var para = document.createElement("div");
+      para.innerText = "This is a paragraph.";
+      document.html.appendChild(para);
     }
   }
 });

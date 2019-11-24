@@ -21,7 +21,7 @@
                     <a class="nav-link" href="">Log in</a>
                 </li> --}}
                 <li class="nav-item">
-                <div id="" class="userIconContainer">
+                <div id="login_container" class="userIconContainer">
                     {{#if session.isAuthenticated}}
                     {{!-- <span class="greetUser">Hi, {{ session.data.authenticated.user.displayName }}</span>  --}}
                     <input {{action "displayMenu"}} id="userDefault" class="roundImage" type="image" src="{{ session.data.authenticated.user.photoURL }}" />
