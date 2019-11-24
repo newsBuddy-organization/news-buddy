@@ -1,3 +1,29 @@
 body {
     padding-top: 56px;
   }
+   /* Using module imports later on */
+  /* LOGIN UI */
+  .dark_bg {
+    background-color: #222f3e;
+  }
+  .userIconContainer {
+    margin-left: 20px!important;
+  }
+  .roundImage {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  #userDefault {
+    height: 30px; width: 30px;
+  }
+ 
+  .loginContainer {
+    border: 1px solid #d9d9d9;
+    border-radius: 7px;
+  }
+
+  /* Navigation*/
+  .space-align {
+    padding-top: 7px;
+    padding-bottom: 2px;
+  }
