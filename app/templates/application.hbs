@@ -29,7 +29,8 @@
                     {{!-- <span class="greetUser">Hi, {{ session.data.authenticated.user.displayName }}</span>  --}}
                   
                     <li class="nav-item">
-                        <a class="nav-link" href="">Favorites</a>
+                      <LinkTo @route="favorites"><a class="nav-link" href="">Favorites</a></LinkTo>
+                        
                     </li>
                     <li class="nav-item"> 
                         <input {{action "displayMenu"}} id="userDefault" class="roundImage" type="image" src="{{ session.data.authenticated.user.photoURL }}" />

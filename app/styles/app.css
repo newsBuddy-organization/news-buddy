@@ -2,12 +2,28 @@ body {
     padding-top: 56px;
   }
 
+
   .news {
     font-family: 'News Cycle', sans-serif;
   }
 
   .orange {
     background-color: #fd7e14;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+}
+
+
+
+  #searchBox{
+    border: none;
+    background-color: #292929;
+    color: #fff;
   }
   
    /* Using module imports later on */
@@ -62,6 +78,8 @@ body {
     max-height: 24px;
     height: 24px;
   }
+
+
 
 .centerButtons {
   text-align: center;

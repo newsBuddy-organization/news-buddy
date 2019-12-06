@@ -1,7 +1,7 @@
 <!-- Page Content -->
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto news">
         <li class="nav-item">
             <a class="nav-link" href=""{{action "submit" "Arts"}}>Arts</a>
         </li>
@@ -51,7 +51,7 @@
         <ul class="navbar-nav ml-auto">
         <form class="navbar-form form-inline space-align" role="search">
             <div class="input-group add-on">
-                <Input class="form-control mr-sm-2" placeholder="Search" type="text" @id="search" @value={{model.lookup.search}}/>
+                <Input id="searchBox" class="form-control mr-sm-2" placeholder="Search" type="text" @id="search" @value={{model.lookup.search}}/>
 
                 <button class="btn btn-primary" type="submit" {{action "submit" model.lookup.search}}>Search</button>
             </div>
@@ -67,12 +67,12 @@
         {{#each this.model.articles as |article|}}
             {{#ui.item}}
             <div class="articleContainer">
-            <img id="leftSide" class="headlineImage" src="{{article.imgurl}}" alt="">
+            <a href="{{article.url}}"><img id="leftSide" class="headlineImage" src="{{article.imgurl}}" alt=""></a>
                 <div id="rightSide">
-                    <div id="rightSide-inner">
+                    <a style="color: #000; text-decoration: none;" href="{{article.url}}"><div id="rightSide-inner">
                         <h1 class="article-title_tabloid">{{article.title}}</h1>
                         <p class="article-maintext_tabloid">{{article.abstract}}</p>
-                    </div>
+                    </div></a>
                     <div class="rightSide-inner-bottom">
                         <button id="leftBtn" onclick={{controls.previous}}>&#x3c; Previous</button>
                         <button id="rightBtn" onclick={{controls.next}}>Next &#x3e;</button>
