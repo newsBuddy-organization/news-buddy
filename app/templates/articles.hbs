@@ -1,12 +1,12 @@
 {{outlet}}
-
+    <h2><span class="news" >&nbsp;<br>&nbsp;TRENDING NOW</span></h2>
     <div class="row text-center my-4">
         {{#each this.model as |article|}}
         <div class="col-md-3 mb-4 ">
             <div class="card h-100">
                 
                 <div class="card-body">
-                    
+                    {{!-- <img src="{{article.imgurl}}"> --}}
                     <h4 class="card-title news">{{article.title}}</h4>
                     <p class="card-text">{{article.abstract}}</p>
                 </div>
