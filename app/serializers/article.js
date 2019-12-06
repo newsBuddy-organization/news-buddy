@@ -14,9 +14,12 @@ export default DS.JSONAPISerializer.extend({
         title: item.title,
         abstract: item.abstract,
         imgurl: item.media[0]['media-metadata'].find(item => item.format === 'mediumThreeByTwo210').url
-        };
 
+        // imgurlBig: item.media[0]['media-metadata'].find(item => item.format === 'superJumbo').url
+        };
+      
         delete item.imgurl;
+        // delete item.imgurlBig;
         delete item.url;
         delete item.title;
         delete item.abstract;

@@ -1,6 +1,8 @@
 import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
 
+const slideRef = document.getElementsByClassName("mySlides");
+
 export default Route.extend({
     queryParams:{
         q:{
@@ -17,4 +19,3 @@ export default Route.extend({
     }
 
 });
-

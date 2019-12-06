@@ -1,13 +1,18 @@
 body {
     padding-top: 56px;
   }
+
+  .news {
+    font-family: 'News Cycle', sans-serif;
+  }
+  
    /* Using module imports later on */
   /* LOGIN UI */
   .dark_bg {
     background-color: #222f3e;
   }
   .userIconContainer {
-    margin-left: 20px!important;
+    /* margin-left: 25px!important; */
   }
   .roundImage {
     border-radius: 50%;
@@ -32,8 +37,7 @@ body {
 }
 
   #user {
-    position: relative;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     max-height: 30px!important;
     height: 30px;
   }
@@ -47,4 +51,98 @@ body {
     background-color: transparent;
     color: #fff;
   }
+
+  .signout {
+    max-height: 30px;
+    height: 30px;
+  }
+
+.centerButtons {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.parentSliderContainer {
+  border-radius: 0;
+}
+
+.topHeadlines {
+  font-family: 'News Cycle', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  padding: 10px;
+  letter-spacing: 2px;
+  background-color: #ee5253;
+}
+
+.articleContainer {
+  float: left;
+  clear: none; 
+  width: 100%;
+}
+
+#leftSide    {
+  width: 50%;
+  display:block;
+  float: left;
+}
+.article-title_tabloid {
+  padding: 15px;
+}
+.article-maintext_tabloid {
+  padding: 10px;
+  font-size: 23px;
+}
+
+#rightSide  {
+  width: 50%;
+  font-family: 'News Cycle', sans-serif;
+  height: auto;
+  /* margin-left: 200px; */
+  display:block;
+  float: right;
   
+}
+/* hide the button on mobile */
+.rightSide-inner-bottom {
+ 
+  padding: 5px;
+  position: absolute;
+  width: inherit;
+  bottom: 0;
+}
+button {
+  outline: none;
+}
+#rightBtn {
+  float: right;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+#leftBtn {
+  float: left;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.headlineImage {
+  width:50%;
+  height: auto;;
+}
+
+ul#horizontalList {
+
+	list-style: none;
+
+	}
+	ul#horizontalList li {
+		display: inline;
+  }
+  
+  .table {
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
+  }
+
