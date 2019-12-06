@@ -51,6 +51,7 @@ body {
     background-color: transparent;
     color: #fff;
   }
+
   .signout {
     max-height: 30px;
     height: 30px;
@@ -144,3 +145,4 @@ ul#horizontalList {
     display: table;   /* Allow the centering to work */
     margin: 0 auto;
   }
+
