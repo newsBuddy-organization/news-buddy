@@ -9,5 +9,6 @@ export default Model.extend({
     title: attr('string'),
     abstract: attr('string'),
     imgurl: attr('string')
+    // imgurlBig: attr('string')
 
 });

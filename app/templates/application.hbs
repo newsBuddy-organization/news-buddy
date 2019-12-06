@@ -6,34 +6,37 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse" id="navbarResponsive" style="">
+            <!-- child navigation -->
             <ul class="navbar-nav ml-auto">
+                <!-- user logged in menu -->
                 <li class="nav-item active">
                      {{#link-to 'index'}}<a class="nav-link" href="">Home
                         <span class="sr-only">(current)</span>
                     </a>{{/link-to}}
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Favorites</a>
-                </li>
+               
                 
-                {{!-- <li class="nav-item">
-                    <a class="nav-link" href="">Log in</a>
-                </li> --}}
-                <li class="nav-item">
+                
                 <div id="login_container" class="userIconContainer">
                     {{#if session.isAuthenticated}}
                     {{!-- <span class="greetUser">Hi, {{ session.data.authenticated.user.displayName }}</span>  --}}
-                    <input {{action "displayMenu"}} id="userDefault" class="roundImage" type="image" src="{{ session.data.authenticated.user.photoURL }}" />
-                    <button class="logoutBtn" {{action "logout"}}>Sign out</button>
+                     <li class="nav-item">
+                    <a class="nav-link" href="">Favorites</a>
+                    </li>
+                    <li class="nav-item"> <input {{action "displayMenu"}} id="userDefault" class="roundImage" type="image" src="{{ session.data.authenticated.user.photoURL }}" />
+                    <button class="logoutBtn" {{action "logout"}}><img class="signout" src="assets/icons/signout.png"></button></li>
+                   
                     {{!-- {{outlet}} --}}
                     {{else}}
+                    
                     <span class="nav-link">
                         <input {{action "login"}} id="userDefault" class="roundImage" type="image" src="assets/images/blank.png" />
                         </span>
                     {{/if}}
                 </div>
-                </li>
+                
+                <!-- if the user is not logged in, show other links that signal user is not loghged in-->
             </ul>
         </div>
     </div>

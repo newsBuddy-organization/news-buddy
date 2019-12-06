@@ -60,15 +60,54 @@
 </nav>
 
 <div class="container ">
+   <div class="parentSliderContainer" style="margin-bottom: 50px;">
+   {{#carousel-container transitionInterval=200 as |ui controls|}}
+   <div class="carousel-body my-4">
+       <h1 class="topHeadlines">TOP HEADLINES</h1>
+        {{#each this.model.articles as |article|}}
+            {{#ui.item}}
+            <div class="articleContainer">
+            <img id="leftSide" class="headlineImage" src="{{article.imgurl}}" alt="">
+                <div id="rightSide">
+                    <div id="rightSide-inner">
+                        <h1 class="article-title_tabloid">{{article.title}}</h1>
+                        <p class="article-maintext_tabloid">{{article.abstract}}</p>
+                    </div>
+                    <div class="rightSide-inner-bottom">
+                        <button id="leftBtn" onclick={{controls.previous}}>&#x3c; Previous</button>
+                        <button id="rightBtn" onclick={{controls.next}}>Next &#x3e;</button>
+                    </div>
+                </div>
+            </div>
+            {{!-- <h4 class="card-title">{{article.title}}</h4> --}}
+            {{/ui.item}}
+        {{/each}}
    
+  </div>
+ 
+  {{!-- <div class="centerButtons">
+    <button onclick={{controls.previous}}>
+      Slide Left
+    </button>
+    <button onclick={{controls.next}}>
+      Slide Right
+  </button>
+  </div> --}}
+{{/carousel-container}}
+</div>
+
+
     <!-- Jumbotron Header -->
-    <header class="jumbotron my-4">
+    {{!-- <header class="jumbotron my-4" style="border:1px solid red;">
+       
+      
+
         <h1 class="display-3">news buddy.</h1>
         <p class="lead">Get your news custom tailored to you! News buddy allows you to pick and choose the news you 
             want to see. No more scrolling through pages of news you dont want to see.
         </p>
         <a href="#" class="btn btn-primary btn-lg">Sign up!</a>
-    </header>
+    </header> --}}
 
     <!-- Page Features -->
 
@@ -97,6 +136,7 @@
 </div>
 
 <!-- /.container -->
+
 
 <!-- Footer -->
 <footer class="py-5 bg-dark">
