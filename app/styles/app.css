@@ -5,6 +5,10 @@ body {
   .news {
     font-family: 'News Cycle', sans-serif;
   }
+
+  .orange {
+    background-color: #fd7e14;
+  }
   
    /* Using module imports later on */
   /* LOGIN UI */
@@ -12,7 +16,9 @@ body {
     background-color: #222f3e;
   }
   .userIconContainer {
-    /* margin-left: 25px!important; */
+ 
+    
+    text-align: right;
   }
   .roundImage {
     border-radius: 50%;
@@ -53,8 +59,8 @@ body {
   }
 
   .signout {
-    max-height: 30px;
-    height: 30px;
+    max-height: 24px;
+    height: 24px;
   }
 
 .centerButtons {

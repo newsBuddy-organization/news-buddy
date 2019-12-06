@@ -1,13 +1,20 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark dark_bg fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark dark_bg fixed-top"><!-- parent navigation -->
     <div class="container">
+      <!-- logo -->
         {{#link-to 'index'}}<a class="navbar-brand" href="#"><img src="assets/images/newsbuddy.png"/></a>{{/link-to}}
+
+        <!-- mobile toggle bar -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive" style="">
+
+
+        <!-- main navigation menu -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
             <!-- child navigation -->
+            <div id="login_container" class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
                 <!-- user logged in menu -->
                 <li class="nav-item active">
@@ -17,8 +24,6 @@
                 </li>
                
                 
-                
-                <div id="login_container" class="userIconContainer" style="display: inline;">
                     
                     {{#if session.isAuthenticated}}
                     {{!-- <span class="greetUser">Hi, {{ session.data.authenticated.user.displayName }}</span>  --}}
@@ -26,9 +31,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="">Favorites</a>
                     </li>
-                    <li class="nav-item" style="border: 1px solid red;"> 
+                    <li class="nav-item"> 
                         <input {{action "displayMenu"}} id="userDefault" class="roundImage" type="image" src="{{ session.data.authenticated.user.photoURL }}" />
-                        <button class="logoutBtn" {{action "logout"}}><img class="signout" src="assets/icons/signout.png"></button>
+                        <button alt="Logout" style="position: absolute;" class="logoutBtn" {{action "logout"}}><img class="signout" src="assets/icons/signout.png" ></button>
                     </li>
                 
                     {{!-- {{outlet}} --}}
@@ -38,14 +43,13 @@
                         <input {{action "login"}} id="userDefault" class="roundImage" type="image" src="assets/images/blank.png" />
                         </span>
                     {{/if}}
+                    </ul>
                 </div>
                 
                 <!-- if the user is not logged in, show other links that signal user is not loghged in-->
-            </ul>
-            <span class="navbar-text">
-                Other Item
-            </span>
+          
         </div>
+        <!-- Navigation meny end -->
     </div>
 </nav>
 
