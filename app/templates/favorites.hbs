@@ -1,2 +1,14 @@
+
+<div class="container">
+  <div class="jumbotron my-5" style="text-align: center;">
+  
+   {{#if session.isAuthenticated}}
+   <h2>Favorite Articles</h2>
+    <h2>User is logged on</h2>
+    {{else}}
+    <h1>404 PAGE NOT FOUND</h1>
+    <h4><br>You may need to log in to view your fav stuff</h4>
+   {{/if}}
+</div>>
+</div>
 {{outlet}}
-<h1>Favorites</h1>
