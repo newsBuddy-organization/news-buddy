@@ -1,6 +1,10 @@
 body {
     padding-top: 56px;
   }
+
+  .news {
+    font-family: 'News Cycle', sans-serif;
+  }
   
    /* Using module imports later on */
   /* LOGIN UI */
@@ -126,3 +130,17 @@ button {
   width:50%;
   height: auto;;
 }
+
+ul#horizontalList {
+
+	list-style: none;
+
+	}
+	ul#horizontalList li {
+		display: inline;
+  }
+  
+  .table {
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
+  }

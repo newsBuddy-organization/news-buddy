@@ -18,19 +18,23 @@
                
                 
                 
-                <div id="login_container" class="userIconContainer">
+                <div id="login_container" class="userIconContainer" style="display: inline;">
+                    
                     {{#if session.isAuthenticated}}
                     {{!-- <span class="greetUser">Hi, {{ session.data.authenticated.user.displayName }}</span>  --}}
-                     <li class="nav-item">
-                    <a class="nav-link" href="">Favorites</a>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Favorites</a>
                     </li>
-                    <li class="nav-item"> <input {{action "displayMenu"}} id="userDefault" class="roundImage" type="image" src="{{ session.data.authenticated.user.photoURL }}" />
-                    <button class="logoutBtn" {{action "logout"}}><img class="signout" src="assets/icons/signout.png"></button></li>
-                   
+                    <li class="nav-item" style="border: 1px solid red;"> 
+                        <input {{action "displayMenu"}} id="userDefault" class="roundImage" type="image" src="{{ session.data.authenticated.user.photoURL }}" />
+                        <button class="logoutBtn" {{action "logout"}}><img class="signout" src="assets/icons/signout.png"></button>
+                    </li>
+                
                     {{!-- {{outlet}} --}}
                     {{else}}
                     
-                    <span class="nav-link">
+                    <span class="navbar-text">
                         <input {{action "login"}} id="userDefault" class="roundImage" type="image" src="assets/images/blank.png" />
                         </span>
                     {{/if}}
@@ -38,6 +42,9 @@
                 
                 <!-- if the user is not logged in, show other links that signal user is not loghged in-->
             </ul>
+            <span class="navbar-text">
+                Other Item
+            </span>
         </div>
     </div>
 </nav>
